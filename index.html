@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="styles.css" />
+<link type="text/css" rel="stylesheet" href="s1.css" />
+<meta charset=utf-8 />
+<script src="test_1.js">
+
+</script>
+<title>My Sample JavaScript Learning Page</title>
+</head>
+<body>
+    <h2>My Sample JavaScript Learning Page</h2>
+     <div class="container" style="padding: 40px">
+        <button id="Trigger">Trigger Slideup/SlideDown</button>
+
+        <div id="Slider" class="slideup">
+            <!-- content has to be wrapped so that the padding and
+                margins don't effect the transition's height -->
+            <div id="Actual">
+                Hello World Text
+            </div>
+        </div>
+    </div>
+    
+    <script src="jquery.js"></script>
+    <script>
+        // slideup/slidedown
+        $("#Trigger").click(function () {
+            if ($("#Slider").hasClass("slideup"))
+                $("#Slider").removeClass("slideup").addClass("slidedown");
+            else
+                $("#Slider").removeClass("slidedown").addClass("slideup");
+        if ($("#test").hasClass("slideDown"))
+                $("#test").removeClass("slideDown");
+            else
+                $("#test").addClass("slideDown");
+
+        });
+
+       /* document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('test').className = 'slideDown';
+  }, 3000);
+}, false);*/
+    </script>
+
+    <div id="test"></div>
+<div class="container">
+    <div class="content">
+        <div class="title">Test</div>
+        <h2>Title</h2>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+    </div>
+</div>
+</body>
+</html>
