@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="styles.css" />
+<link type="text/css" rel="stylesheet" href="s1.css" />
+<meta charset=utf-8 />
+<!--<script src="js_practice1.js"></script>
+<script src="js_practice2.js"></script>
+<script src="js_practice3.js"></script>
+<script src="js_practice4.js"></script>
+<script src="js_practice5.js"></script>
+<script src="js_practice6.js"></script>
+<script src="js_practice7.js"></script>
+<script src="js_practice8.js"></script>
+<script src="js_practice9.js"></script>
+<script src="js_practice10.js"></script>
+<script type="module" src="./js_practice12.js"></script>
+<script src="js_practice13.js"></script>
+<script src="js_practice14.js"></script>
+<script src="js_practice15.js"></script>
+<script src="js_practice16.js"></script>
+<script src="js_practice17.js"></script>
+<script src="js_practice18.js"></script>
+<script src="js_practice19.js"></script>
+<script src="js_practice20.js"></script>
+<script src="js_practice21.js"></script>-->
+<script src="js_practice22.js"></script>
+<script src="js_web.js"></script</script>
+<script src="js_chart.js"></script</script>
+<title>My Sample JavaScript Learning Page</title>
+</head>
+<body>
+    <h2>My Sample JavaScript Learning Page</h2>
+     <div class="container" style="padding: 40px">
+        <button id="Trigger">Trigger Slideup/SlideDown</button>
+
+        <div id="Slider" class="slideup">
+            <!-- content has to be wrapped so that the padding and
+                margins don't effect the transition's height -->
+            <div id="Actual">
+                Hello World Text
+            </div>
+        </div>
+    </div>
+    <button onclick="alert1()">Alert</button>
+    <button onclick="calculate()">calculate</button>
+    <button onclick="draw_chart('chart',data=[1,2,3,4,5,6,7,8])" name="drw_chart" > Chart </button>
+    <div id="container">
+        <canvas id="chart">
+
+        </canvas>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        // slideup/slidedown
+        $("#Trigger").click(function () {
+            /* if ($(".container").hasClass("bkground")) 
+                $(".container").removeClass("bkground");
+            else 
+                $(".container").addClass("bkground");
+ */         $(".container").toggleClass("bkground");
+            if ($("#Slider").hasClass("slideup"))
+                $("#Slider").removeClass("slideup").addClass("slidedown");
+            else
+                $("#Slider").removeClass("slidedown").addClass("slideup");
+        if ($("#test").hasClass("slideDown"))
+                $("#test").removeClass("slideDown");
+            else
+                $("#test").addClass("slideDown");
+
+        });
+
+       /* document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('test').className = 'slideDown';
+  }, 3000);
+}, false);*/
+    </script>
+
+    <div id="test"></div>
+<div class="container">
+    <div class="content">
+        <div class="title"><input type="text" name="multiplier" onchange="multiply()" id="ml"></div>
+        <h2>Title</h2>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+        <p>Test test asdjaksdkajkasdjakshdjkasd asdaksdaksd</p>
+        <button name="Check" value="Check number" onclick="pos()">
+    </div>
+</div>
+</body>
+</html>

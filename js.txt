@@ -1,0 +1,335 @@
+In this session, you learned about the following concepts:
+    There are two types in which the variables can be passed - by value and by reference. All the primitive types are passed by value and all the non-primitive types are passed by reference.
+    The .__proto__ property of a variable refers to either an object or to null. Remember that you can implement inheritance in JavaScript by assigning the prototype of an object to another object.
+
+    There are two kinds of scope in JavaScript:
+
+        Local Scope - Anything inside a function is in its local scope.
+
+        Global Scope - Anything not inside any function is in its global scope.
+
+    A closure is basically an inner function that has access to the outer (enclosing) function’s resources due to the scope chain where a child can access all the resources of its parent.
+
+    All the variables which are declared in your code are moved at the top and remembered by the compiler. This is the concept of hoisting.
+
+    The popular ‘this’ keyword points to the global window object in the context of browsers when written inside a regular function call. However, in the case of a method, which is defined as a function inside an object, the ‘this’ keyword points to the object to which the method is bond.
+
+    The methods - bind(), call() and apply() are used to bind a function while passing the desired scope to the inner function. This is also useful to solve the problem of 'this' keyword pointing to the global object inside a function in an object.
+
+   Learned a very important difference between var and let / const keywords. Variables declared using var keyword are function-scoped whereas variables declared using let and const keywords are block-scoped.
+    looked at how the variables declared using the var keyword are hoisted to the top of their scope and the variables declared using let / const keywords are not hoisted.
+    the variables declared using let/const keywords are not hoisted to the top of the scope. Thus, you must always prefer to declare all your keywords using let and const keywords as compared to declaring them using var keyword, when following the ES6 syntax.
+
+     You can define a function called as constructor inside each class and this function is the first function to be called when the class is instantiated. Instantiating a class means creating an object of the class and this is done using the new operator.
+
+     let animal = {
+   moves: true
+}
+
+let rabbit = {
+   eats: true
+}
+
+rabbit.__proto__ = animal;
+
+console.log(rabbit.moves);
+
+can be rewritten as follows using the classes in ES6 syntax:
+
+ 
+
+class Animal {
+   constructor() {
+       this.moves = true;
+   }
+}
+
+class Rabbit extends Animal {
+   constructor() {
+       super();
+       this.eats = true;
+   }
+}
+
+let rabbit = new Rabbit();
+console.log(rabbit.moves);
+
+ a alternative to defining traditional functions, viz. using arrow functions, which behave as the anonymous functions. You witnessed how they’re a quick and effective way of declaring functions. You are no longer required to use the function keyword. If you have a single parameter, using arrow functions, you can skip writing the parentheses. But beware, if you have no parameters, then you need parentheses.
+
+Also, when you have a single return statement, you can omit the word return keyword as well as the curly braces. But once again, the catch over here is that there can be no other statement in the function apart from the return statement.
+Arrow functions don’t have a ‘this’ keyword of their own, so anything to do with ‘this’ inside an arrow function will point to the scope of the function the arrow function is written inside.
+
+you looked at how the outer function, when changed to an arrow function, starts pointing to the scope in which this outer function it is written inside, which is the global scope of the window object. Thus, the ‘this’ keyword inside the outer function points to the window object. Now, when the inner function uses the ‘this’ keyword, it actually references the scope of the outer function. Since the inner function gets its ‘this’ reference from the outer function which now points to the global object, the inner function also starts pointing to the global object.
+
+Well that was quite exciting, wasn’t it? Sending individual parameters as functions and receiving them as an array inside the function? This way you are not concerned about how many arguments the user passes inside a function.
+
+Well that was interesting, wasn’t it? But do remember to use rest operators should be written at the end inside the function declaration and not in the middle of a set of arguments.
+
+Do remember that the template literals must be wrapped inside the back-ticks , which are different from single quotes ‘’ and double quotes “”.
+
+In this session, you learned about:
+
+    ECMAScript, which is a trademarked scripting language specification standardized by ECMAScript International. This specification governs JavaScript language by providing a set of rules and guidelines which JavaScript must conform to.   
+    JavaScript Engine, which interprets and executes JavaScript code in the browser. 
+    Different releases of ECMAScript specification - involving ES2015 (popularly known as ES6) released in 2015, which brought major changes in the JavaScript language.
+    Babel, which is the JavaScript compiler that converts the code written in ES6 (or later versions) to the ES5 code, which is understood by most of the browsers.
+
+You also looked at some of the differences between ES5 and ES6 syntax. Following are some of the points followed by the new syntax in ES6:
+
+    Declaring variables with two new keywords - let and const. The former is used when you wish to change the value of the variable in future and the latter is used when you do not wish to change the value of the variable. Unlike var, the variables declared using let/const keywords are not hoisted.
+    Classes, which are syntactic sugar over JavaScript's existing functions and help in achieving what is so-called prototype-based inheritance in ES5.
+    Arrow functions, which is a new syntax over traditional functions and are used to write code quickly and more effectively. They also solve some of the problems, as we see with the context w.r.t. 'this' keyword.
+    Array methods - map(), filter(), reduce() methods, which are used to iterate over an array and is a much simpler and quicker way to perform operations on an array as compared to its alternative methods.
+    The powerful three dots - referred to as the spread operator as well as the rest parameters, depending upon the context in which they are used. When used as spread operator, they are used to segregate an array into its individual elements. When used as the rest parameters, they are used to treat individual arguments passed to a function as a combined array in the function parameters.
+    Template Literals, which are better way of concatenating string literals. 
+    Ways of destructuring an array or an object to extract the its individual elements or keys.
+    import and export keywords - used for importing and exporting modules (including variables, functions, classes, etc.) defined in one file to be used in another file so as to maintain code reusability and reduce redundancy.
+
+
+    JavaScript is a single-threaded synchronous language which executes all the code line by line in the order in which it is written. 
+
+    In the last video, you looked at how you could write some code that does not produce the output in the order you had specified in the code. This is possible due to the asynchronous behaviour of JavaScript. In the next video, you’ll learn from Srishti about what asynchronous behaviour is.
+
+    In the last video, you learned that though JavaScript is a synchronous programming language, yet you can write asynchronous code in it. In asynchronous programming, you can do tasks without waiting for a task to complete its execution. Even when a long-running task starts, the remaining program code continues to run and when the task gets complete, the program is informed and gets access to the result. In short, you can run some code in the background while the main code continues getting executed. Thus, this helps in utilization of time & resources.
+ 
+
+Running the code in background essentially means running them inside Web APIs. You’ll now hear from Sakshi in the next video about how Web APIs work while looking at a simple example.
+
+A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of action.
+
+ promise is and what role it plays in the asynchronous programming.
+
+Promise is a Special JavaScript Object that links between Producer and Consumer function.
+
+1.      There are two types of code in asynchronous programming:
+
+    Producer Code: The code that produces some result
+    Consumer Code: The code that consumes the result produced by the producer code
+
+2.      A promise is an object which makes the result produced by the producer code available to the consumer code, thus linking them together.
+ 
+3.      The producer code is contained inside the promise object.
+
+4.     The producer code, which is inside the promise object, contains resolve & reject callbacks.
+
+5.      The producer code is executed as soon as the promise object is created. You do not need to explicitly call the producer code.
+
+1.  The internal properties of an object are the ones which cannot be accessed directly or manipulated. Also, the internal properties are enclosed within double square brackets [[]].
+ 
+
+2.  A promise object consists of two internal properties:
+
+    PromiseStatus
+    PromiseValue
+
+3.  When a promise object is created, the [[PromiseStatus]] property is initialized with ‘pending’ and the [[PromiseValue]] property is initialized with undefined.
+
+Success --->  resolve callback
+The properties of the promise object change as:
+Status = ‘resolved’
+Value = val
+
+Failure --->  reject callback
+Status = ‘rejected’
+Value = err
+
+invoking the resolve() callback inside the producer code changes the Status property to ‘resolved’ and the Value property to whatever is passed as an argument while resolving the promise.
+
+reject() callback inside the producer code changes the Status property to ‘rejected’ and the Value property to whatever is passed as an argument while rejecting the promise.
+
+n the last video, you learned that there are two types of consumer code:
+
+1. then() method
+2. catch() method
+
+// assume that the promise object named promiseObj already exists consisting of producer code
+promiseObj.then(successCallback, errorCallback);
+
+// writing the callbacks
+promiseObj.then((parametersToHoldArgumentsPassedWhenPromiseIsResolved) => {
+// code to execute when promise is resolved
+}, (parametersToHoldArgumentsPassedWhenPromiseIsRejected) => {
+// code to execute when promise is rejected
+});
+
+
+Syntax of then() method:
+
+promiseObj.then((value) => {
+    // code for promise is resolved
+}, (error) => {
+    // code for promise is rejected
+});
+
+
+You also broke a common illusion that resolve and reject are keywords in JavaScript. The fact is that they are NOT keywords. You can use any valid identifier in place of resolve & reject. It is just for the sake of understanding that we use these names.
+
+Also, a very important point to be noted is that the order of the resolve and reject callback methods must remain the same. The first parameter of the producer code is always treated as the resolve() callback method which represents that the code executed successfully and the second parameter of the producer code is always treated as the reject() callback method which represents that the code encountered some error while in execution. You cannot reverse their order.
+
+Syntax of catch() method:
+
+// assume that the promise object named promiseObj already exists consisting 
+promiseObj.catch(errorCallback);
+
+Syntax of catch() method:
+
+// writing the callback
+promiseObj.catch((parametersToHoldArgumentsPassedWhenPromiseIsRejected) => {
+// code to execute when promise is rejected
+});
+
+Now, when the output is checked, the status of the promise is still 'pending' and not 'resolved'. This is because the promise is getting resolved inside a setTimeout() method, which is an asynchronous method. As you are aware, the asynchronous methods are long-running tasks handled by the Web APIs, callback queue, event loop. Meanwhile, the remaining code is executed and the control comes back to the code written next, which is the log statement, thus logging the promiseObj to console. Since the promise is not yet resolved, the default status (pending) and the default value (undefined) of the promiseObj will be printed to the console.
+
+CASE A: When the promise is RESOLVED
+
+// defining the promise object with the producer
+let promiseObj = new Promise((resolve, reject) => {
+    console.log("Getting name from DB...");
+    setTimeout(() => {
+        resolve("Srishti");
+    }, 3000);
+
+});
+
+// defining the consumer - then() method
+promiseObj.then(val => {
+    console.log(`Name received from DB = ${val}`);
+}, err => {
+    console.log(`Error occurred = ${err}`);
+});
+
+
+CASE B: When the promise is REJECTED
+
+// defining the promise object with the producer
+let promiseObj = new Promise((resolve, reject) => {
+    console.log("Getting name from DB...");
+    setTimeout(() => {
+        reject(new Error("Could not get the name from DB!"));
+    }, 3000);
+
+});
+
+// defining the consumer - then() method
+promiseObj.then(val => {
+    console.log(`Name received from DB = ${val}`);
+}, err => {
+    console.log(`Error occurred = ${err}`);
+});
+
+WAY 2:
+CASE A: When the promise is RESOLVED
+
+// defining the promise object with the producer
+let promiseObj = new Promise((resolve, reject) => {
+    console.log("Getting name from DB...");
+    setTimeout(() => {
+        resolve("Srishti");
+    }, 3000);
+
+});
+
+// defining the consumer - then() method
+promiseObj.then(val => {
+    console.log(`Name received from DB = ${val}`);
+});
+
+// defining the consumer - catch() method
+promiseObj.catch(err => {
+    console.log(`Error occurred = ${err}`);
+});
+
+CASE B: When the promise is REJECTED
+
+// defining the promise object with the producer
+let promiseObj = new Promise((resolve, reject) => {
+    console.log("Getting name from DB...");
+    setTimeout(() => {
+        reject(new Error("Could not get the name from DB!"));
+    }, 3000);
+
+});
+
+// defining the consumer - then() method
+promiseObj.then(val => {
+    console.log(`Name received from DB = ${val}`);
+});
+
+// defining the consumer - catch() method
+promiseObj.catch(err => {
+    console.log(`Error occurred = ${err}`);
+});
+
+
+1. async & await keywords were introduced in ES8 (ES2017), which are internally based on promises but makes the code even more readable as compared to promises.
+ 
+
+2. When the keyword async is prepended to a function, it can be safely assumed that a promise is returned from that function. Even if the function does not explicitly return a promise object, it is made to implicitly return a promise object after resolving it with the value that is returned from the function.
+
+Code Snippet:
+
+let foo = async () => Promise.resolve("Srishti");
+foo().then(val => alert(val));
+
+you looked at how you can convert an asynchronous code written using promises into the code utilizing async function and using await inside it to wait for the promise to be resolved or rejected.
+
+CASE A: When the promise is RESOLVED
+
+// defining the async function which waits for the promise to be resolved / rejected
+const getName = async () => {
+    try {
+        let name = await namePromise;
+        console.log(`Name received from DB = ${name}`);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// defining the promise object with the producer
+let namePromise = new Promise((resolve, reject) => {
+    console.log("Getting name from DB...");
+    setTimeout(() => {
+        resolve("Srishti");
+    }, 3000);
+});
+
+getName();
+
+Code Snippet *:
+ES6 arrow function
+ES7 Promises
+async & await syntax in ES8 (2017)
+
+// USING PROMISES
+// function to fetch details of user in Student Management System
+const fetchUserDetails = (username, password) => {
+    database.authenticateUser(username, password)
+        .then(userInfo => dataBase.getRoles(userInfo))
+        .then(rolesInfo => dataBase.getPermissions(rolesInfo))
+        .then(permissionsInfo => {
+            // code written inside the function named 'callback'
+        })
+        .catch((err) => {
+            // code to handle error
+        });
+};
+
+const fetchUserDetails = async (username, password) => {
+    try {
+        const userInfo = await dataBase.authenticateUser(username, password);
+        const rolesInfo = await dataBase.getRoles(userInfo);
+        const permissionsInfo = await dataBase.getPermissions(rolesInfo);
+    } catch (e) {
+        //code to handle error
+    }
+};
+
+In this session, you learned about:
+
+    JavaScript being a single-threaded language; yet the way it showcases the asynchronous behavior. 
+    Callbacks - the functions which are to be called when some predefined action is completed and when there are multiple levels of callbacks inside callbacks, the triangular shape that is formed is known as the callback hell, which makes the code hard to read, maintain, and debug.
+    Promises, which is the new way of writing the asynchronous functions and are useful for converting the callback hells into much more readable and manageable code. They have two properties:
+        state: Initially, when the promise is defined, its state is pending. The state changes to fulfilled / rejected once the producing code produces some result.
+        result - Initially, when the promise is defined, the result is initialized to undefined. Once the producing code finishes its execution, the result is set to the output of this code.
+    async and await, which are the keywords introduced in ES8 to write asynchronous functions in JavaScript. They are even better way of writing code as compared to callbacks and promises.
+    
